@@ -1,13 +1,18 @@
 //Crear variables par los caracteres utilizables
 
 
-function passwordGenerator () {
+
 const mayusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const minusculas = 'abcdefghijklmnopqrstuvwxyz';
 const numeros = '0123456789';
 const simbolos = '$%&/()=?¿#[]{}<>';
-const generator = document.getElementById('generator')
+const generatorBtn = document.getElementById('generator-btn');
+const passwordOutput = document.getElementById('password-output');
+const selector = document.getElementById('selector');
 
+
+
+function passwordGenerator () {
 const alMay = Math.floor(Math.random() * mayusculas.length)
 const leMay = mayusculas[alMay];
 
@@ -20,13 +25,27 @@ const leNum = numeros[alNum];
 const alSim = Math.floor(Math.random() * simbolos.length);
 const leSim = simbolos[alSim];
 let password = leMay + leMin + leNum + leSim;
+
 function aleatoriedad(password) {
 
-const caracteresPassword = mayusculas + minusculas + numeros + simbolos;
+
 const min = 12;
 const max = 50;
-const longitudDeseada = Math.floor(Math.random(max - min + 1)) + min;
+
+let longitudDeseada;
+if(selector && selector.value) {
+
+    longitudDeseada = parseInt(selector.value);
+    longitudDeseada = Math.max(min, Math.min(max, longitudDeseada));
+} else {
+    longitudDeseada = Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+const caracteresPassword = mayusculas + minusculas + numeros + simbolos;
+
 const caracteresAdicionales = longitudDeseada - 4;
+
+
 for (let i = 0 ; i < caracteresAdicionales ; i++) {
     const indiceAleatorio = Math.floor(Math.random() * caracteresPassword.length);
     password += caracteresPassword.charAt(indiceAleatorio);
@@ -34,11 +53,13 @@ for (let i = 0 ; i < caracteresAdicionales ; i++) {
 
 password = mezcla(password);
 
-if(generator) {
-    generator.value = password;
+if(passwordOutput) {
+    passwordOutput.value = password;
 } else {
     console.log('Contraseña generada', password)
 }
+
+    return password;
 }
 
 function mezcla(cadena) {
@@ -48,25 +69,16 @@ function mezcla(cadena) {
         [arr[i], arr[j]] = [arr[j], arr[i]];
     }
     return arr.join('')
-
+ 
 }
 
 aleatoriedad(password)
 }
 passwordGenerator()
 
+if (generatorBtn) {
+    generatorBtn.addEventListener('click', function() {
+         passwordGenerator()
+    });
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-*/
