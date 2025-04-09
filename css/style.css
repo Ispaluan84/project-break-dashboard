@@ -2,7 +2,8 @@
 
 body {
 	font-family: "Roboto", sans-serif;
-	background-color: rgb(59, 36, 36)
+	background-color: rgba(156, 94, 94, 0.822);
+	color: white;
 }
 
 
@@ -36,6 +37,38 @@ body {
 	background-color: rgba(202, 198, 198, 0.322) ;
 	border: none;
 	letter-spacing: 0.25em;
+
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#dateClock {
+	border: 1px solid #242020a9;
+	border-radius: 20px;
+	background-color: #242020a9;
+	opacity: 0.5;
+	padding: 10px;
+	width: auto;
+	height: auto;
+	display: inline-block;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	
+	
+	
+}
+
+#clock {
+	font-size: 50px;
+}
+
+#date {
 
 }
 
