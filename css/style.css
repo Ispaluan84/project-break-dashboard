@@ -4,6 +4,8 @@ body {
 	font-family: "Roboto", sans-serif;
 	background-color: rgba(156, 94, 94, 0.822);
 	color: white;
+ //width: 100%;
+ //height: auto;
 }
 
 .cont-password {
