@@ -6,13 +6,18 @@ body {
 	color: white;
 }
 
+.cont-password {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
 
+}
 #password {
 	width: 200px;
 	height: 50px;
-	border-radius: 50px;
-	box-shadow: -16px 6px 39px 15px rgba(0,0,0,0.75);
-	background-color: rgba(75, 68, 68, 0.322);
+	border-radius: 20px;
+	background-color: #2420207e;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -23,7 +28,7 @@ body {
 
 #generator-btn {
 	font-size: 18px;
-	background-color: rgba(20, 20, 179, 0.712);
+	background-color: #df9953b6;
 	border: none;
 	border-radius: 5px;
 	height: 25px;
@@ -59,9 +64,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	
-	
-	
 }
 
 #clock {
@@ -69,6 +71,10 @@ body {
 }
 
 #date {
+	font-size: 25px;
+}
 
+#message {
+	font-size: 18px;
 }
 

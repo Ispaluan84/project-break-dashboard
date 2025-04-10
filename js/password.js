@@ -1,6 +1,3 @@
-//Crear variables par los caracteres utilizables
-
-
 
 const mayusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const minusculas = 'abcdefghijklmnopqrstuvwxyz';
