@@ -1,46 +1,43 @@
-/*
-## Estación meteorológica:
+function background() {
 
-### ¿Como funciona?
-Crea una página que tendrá lo siguiente:
-- El tiempo en el momento en el que accedemos a la página con varios elementos:
-  - Ciudad y Pais. Pondremos la ciudad y País en el que nos encontramos.
-  - El estado del clima.
-  - Imagen y grados celsius de nuestra ciudad.
-  - Precipitaciones, humedad y viento km/h.
-- La previsión por horas en el día en el que estamos. Con su hora, imagen y grados celsius. 
-- Dale estilo con CSS.
+  const image = ['img/1.jpg', 'img/2.jpg', 'img/3.jpg', 'img/4.jpg', 'img/5.jpg', 'img/6.jpg', 'img/7.jpg', 'img/8.jpg', 'img/9.jpg', 'img/10.jpg'];
+  const imageRandom = image[Math.floor(Math.random() * image.length)];
+  document.body.style.backgroundImage = `url('${imageRandom}')`
+  
+}
+background()
+setInterval(background, 15000)
 
-### ¿Qué usaremos?
-- API del tiempo de `https://www.weatherapi.com/`
-- Necesitarás una API KEY. Podrás conseguirla entrando en la url de weatherapi y pulsando en signup. Rellena los datos que pide y nada más entrar os aparecerá esa API KEY.
-- Puedes probar que funciona en esta página: `https://www.weatherapi.com/api-explorer.aspx` metiendo la APIKEY y dándole al botón de `show response`
-- Aquí está la documentación completa `https://www.weatherapi.com/docs/`
-- Este es el `base URL` al que tendréis que acceder `http://api.weatherapi.com/v1` añadiremos detrás lo que necesitemos. 
- - Este es un ejemplo de endpoint con la APIKEY y la ciudad. Solo habría que cambiar los datos de `${apiKey}` por la nuestra y `${ciudad}` por la elegida por nosotros `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&aqi=no`
-- `fetch` para hacer peticiones a la API.
+const endPoint = 'http://api.weatherapi.com/v1/current.json?key=78afec6aed364854a8c100007251004&q=Sevilla&aqi=no';
+const contWeather = document.getElementById("weather");
 
-### PISTAS Y CONSEJOS
-- La URL base es `http` cámbiala desde el inicio por `https` para no tener problemas en el futuro de bloqueos de seguridad.
-- Usa `promesas` o `ASYNC/AWAIT` para crear la asincronía en las peticiopnes `fetch`
-- Piensa si necesitas solo un endpoint o varios. Revisa que trae cada petición.
-- Estructura bien tu código */
-
-const endPoint = 'https://api.weatherapi.com/v1/current.json?key=78afec6aed364854a8c100007251004&q=Sevilla&aqi=no';
-const contWeather = document.getElementById('weather');
-
-const weather = async() => {
-  try{
-    const response = await fetch(endPoint);
-      if (!response.ok) {
+function getWeather() {
+  return fetch(endPoint)
+    .then((response) => {
+      if(!response.ok) {
         throw new Error(`Error: ${response.status}`);
       }
-          return await response.json();
-  }    
-contWeather.forEach((element) => {
-    const {location: {name}, current: {temp_c}, current: {wind_kph}, current: {precip_mm}, current: {humidity} } = element
-    console.log(element)
-  })catch (error) {console.error('Error')
-} }
+     return response.json();
+    });
+    
+}
 
-weather()
+function setWeather(){
+   getWeather()
+.then((data) => {
+  contWeather.innerHTML =`
+    <h2>${data.location.name}</h2> 
+    <div class="logo">
+      <img src="https:${data.current.condition.icon}" alt="icon">
+      <p>${data.current.temp_c} ºC</p>
+    </div>
+    <div class="climate">
+      <p>Precipitaciones: ${data.current.precip_mm}%</p>
+      <p>Viento: ${data.current.wind_kph}Km/h</p>
+      <p>Humedad: ${data.current.humidity}%</p> 
+    </div>
+  `
+}).catch((err) => {console.error(err.message)})
+}
+setWeather()
+
