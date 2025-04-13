@@ -52,7 +52,7 @@ function listOfLink(){
         })
 
         li.appendChild(a);
-        li.appendChild(removeBtn)
+        li.appendChild(removeBtn);
         list.appendChild(li);
     
     })

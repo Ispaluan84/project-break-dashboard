@@ -26,3 +26,21 @@ Crea una página que tendrá lo siguiente:
 - Piensa si necesitas solo un endpoint o varios. Revisa que trae cada petición.
 - Estructura bien tu código */
 
+const endPoint = 'https://api.weatherapi.com/v1/current.json?key=78afec6aed364854a8c100007251004&q=Sevilla&aqi=no';
+const contWeather = document.getElementById('weather');
+
+const weather = async() => {
+  try{
+    const response = await fetch(endPoint);
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status}`);
+      }
+          return await response.json();
+  }    
+contWeather.forEach((element) => {
+    const {location: {name}, current: {temp_c}, current: {wind_kph}, current: {precip_mm}, current: {humidity} } = element
+    console.log(element)
+  })catch (error) {console.error('Error')
+} }
+
+weather()
