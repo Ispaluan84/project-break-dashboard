@@ -1,36 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
 
-body {
+* {
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+}
+
+body {
+	color: white;
 	font-family: "Roboto", sans-serif;
 	background-size: cover;
 	background-position: center;
+	background-repeat: no-repeat;
 	height: 100vh;
-	color: white;
-	
 }
 
 .cont-total {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	justify-items: center;
-
+	flex: 1;
 }
+
+.icons {
+	background-color: #242020a9;
+	display: flex;
+	justify-content: end;
+	gap: 10px;
+	padding: 10px;
+	
+}
+
+/* CSS Generador de Contraseñas*/
 
 .cont-password {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	margin-top: 20px;
 
 }
+
+.title {
+	color: whitesmoke;
+}
+
 #password {
+	word-break: break-all;
+	overflow-wrap: break-word;
+	white-space: normal;
 	width: 200px;
-	height: 50px;
+	height: auto;
 	border-radius: 20px;
-	background-color: #2420207e;
+	background-color: #242020a9;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -40,25 +60,27 @@ body {
 }
 
 #generator-btn {
-	font-size: 18px;
-	background-color: #df9953b6;
+	font-size: 15px;
+	color: white;
+	background-color: #6312e6e7;
 	border: none;
 	border-radius: 5px;
 	height: 25px;
-	width: 80px;
+	width: 180px;
 	cursor: pointer;
 }
 
 #password-output {
-	width: 100%;
+	width: auto;
 	color: white;
-	background-color: rgba(202, 198, 198, 0.322) ;
 	border: none;
 	letter-spacing: 0.25em;
 
 }
+/*CSS Reloj*/
 
 .container {
+	margin: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -90,6 +112,8 @@ body {
 #message {
 	font-size: 18px;
 }
+
+/*CSS Añadidor Enlaces*/
 
 #cont-link {
 	margin-top: 20px;
@@ -136,8 +160,9 @@ a {
 	border: 1px solid #242020a9;
 	border-radius: 25px;
 	display: inline-block;
-	justify-content: center;
 	justify-items: center;
+	justify-content: center;
+	align-content: end;
 	align-items: center;
 }
 
@@ -168,4 +193,5 @@ a {
 	justify-content: center;
 	
 }
+
 

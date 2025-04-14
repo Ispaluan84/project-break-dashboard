@@ -7,40 +7,24 @@
     <title>DashBoard</title>
 </head>
 <body>
-    <div class="cont-total">
-    <section class="container">
-        <div id="dateClock">
-            <div id="clock"></div>
-            <div id="date"></div>
-            <div id="message"></div>
-        </div>
-    </section>
-    <section class="cont-password">
-        <div id="password">
-            <input id="selector" type="number" min="12" max="50" placeholder="12-50">
-            <button id="generator-btn">Generar</button>
-            <input type="text" id="password-output" readonly>
-          
-        </div>
-    </section>
-    <section class="container">
-        <div id="cont-link">
-            <input type="text" placeholder="Título" id="title">
-            <input type="text" placeholder="Enlace" id="link">
-            <button id="keep">Guardar</button>
-            <ul id="list"></ul>
-        </div>
-    </section>
-    <section id="container-weather">
-        <div id="weather"></div>
-    </section>
-    </div>
-    <div id="icons">
-        <a href="/link.html">Enlaces</a>
-        <a href="/password.html">Generador Contraseñas</a>
-        <a href="/reloj.html">Reloj</a>
-        <a href="/weather.html">Estación Meteorológica</a>
-    </div>
+    <header>
+
+    </header>
+    <main class="cont-total">
+        <section class="container"> <!--HTML del Reloj-->
+            <div id="dateClock">
+                <div id="clock"></div>
+                <div id="date"></div>
+                <div id="message"></div>
+            </div>
+        </section>
+    </main>
+    <footer class="icons">
+        <a href="/link.html"><img src="./png/link_icon.png" alt="icono enlace"/></a>
+        <a href="/password.html"><img src="./png/password.png" alt="icono contraseña"/></a>
+        <a href="/reloj.html"><img src="./png/clock.png" alt="icono reloj"/></a>
+        <a href="/weather.html"><img src="./png/weather.png" alt="icono weather"/></a>
+    </footer>
 </body>
 <script src="./js/script.js"></script>
 </html>
