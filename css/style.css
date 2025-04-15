@@ -16,11 +16,18 @@ body {
 }
 
 .cont-total {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-around;
+	flex-wrap: wrap;
+
+	gap: 30px;
 	
 }
 
 .icons {
-	background-color: #242020a9;
+	position: relative;
+	top: 280px;
 	display: flex;
 	justify-content: end;
 	gap: 10px;
@@ -31,13 +38,14 @@ body {
 /* CSS Generador de Contraseñas*/
 
 .cont-password {
+	
 	width: auto;
 	height: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-	margin-top: 20px;
+	align-items:center;
+	margin: 10px;
 }
 
 .title {
@@ -83,6 +91,7 @@ body {
 .container {
 	margin: 10px;
 	display: flex;
+	align-content: center;
 	justify-content: center;
 	align-items: center;
 }
@@ -116,28 +125,55 @@ body {
 
 /*CSS Añadidor Enlaces*/
 
+.container-link {
+	padding: 10px;
+	margin: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:start;
+	text-align: center;
+}
+
 #cont-link {
-	margin-top: 20px;
+	width: 300px;
+	margin-top: 10px;
 	border-radius: 20px;
 	background-color: #242020a9;
 	opacity: 0.8;
 	padding: 20px;
 	gap: 20px;
 	display: flex;
+	
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content:center;
 	
 }
 
+#keep {
+	color: whitesmoke;
+	background-color: blue;
+	font-size: 18px;
+	padding: 5px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
 #list {
+	
+	margin: 10px;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	flex-wrap: wrap;
 	list-style: none;
 	text-decoration: none;
 }
 
 li {
+	border-radius: 10px;
 	background-color: #242020f8;
 	margin: 10px;
 	padding: 10px;
@@ -146,27 +182,39 @@ li {
 
 a {
 	text-decoration: none;
-	color: whitesmoke
+	color: whitesmoke;
+	margin-right: 8px;
+}
+
+a:hover {
+	color: rgb(27, 27, 211);
+}
+
+.remove-btn {
+	border-radius: 75px;
+	cursor: pointer;
 }
 
 /*CSS de la estacion meteorologica*/
 
 #container-weather {
-	background-color: #242020a9;
-	opacity: 0.7;
-	padding: 20px;
-	margin: 20px;
-	width: 450px;
-	height: 100px;
-	border: 1px solid #242020a9;
-	border-radius: 25px;
+	margin: 10px;
 	display: flex;
 	justify-content: end;
+	align-items: center;
 }
 
 #weather {
-	
+	opacity: 0.7;
+	padding: 0;
+	margin: 10px;
+	width: 450px;
+	height: 140px;
+	border: 1px solid #242020a9;
+	border-radius: 25px;
+	background-color: #242020a9;
 	display: flex;
+	justify-content: end;
 }
 
 .logo {
