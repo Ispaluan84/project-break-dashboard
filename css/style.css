@@ -16,7 +16,7 @@ body {
 }
 
 .cont-total {
-	flex: 1;
+	
 }
 
 .icons {
@@ -31,12 +31,13 @@ body {
 /* CSS Generador de Contraseñas*/
 
 .cont-password {
+	width: auto;
+	height: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	margin-top: 20px;
-
 }
 
 .title {
@@ -47,7 +48,7 @@ body {
 	word-break: break-all;
 	overflow-wrap: break-word;
 	white-space: normal;
-	width: 200px;
+	width: 300px;
 	height: auto;
 	border-radius: 20px;
 	background-color: #242020a9;
@@ -155,15 +156,12 @@ a {
 	opacity: 0.7;
 	padding: 20px;
 	margin: 20px;
-	width: auto;
-	height: auto;
+	width: 450px;
+	height: 100px;
 	border: 1px solid #242020a9;
 	border-radius: 25px;
-	display: inline-block;
-	justify-items: center;
-	justify-content: center;
-	align-content: end;
-	align-items: center;
+	display: flex;
+	justify-content: end;
 }
 
 #weather {
