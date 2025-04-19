@@ -6,6 +6,10 @@
 	padding: 0;
 }
 
+header {	
+	padding: 20px;
+}
+
 body {
 	color: white;
 	font-family: "Roboto", sans-serif;
@@ -15,6 +19,11 @@ body {
 	height: 100vh;
 }
 
+.title {
+	background-color: rgba(116, 114, 114, 0.767);
+	border-radius: 5px;
+	color: #242020e3;
+}
 .cont-total {
 	display: flex;
 	align-items: baseline;
@@ -26,8 +35,9 @@ body {
 }
 
 .icons {
-	position: relative;
-	top: 280px;
+	position: absolute;
+	right: 25px;
+	top: 600px;
 	display: flex;
 	justify-content: end;
 	gap: 10px;
@@ -38,7 +48,9 @@ body {
 /* CSS Generador de Contraseñas*/
 
 .cont-password {
-	
+	position: absolute;
+	right: 500px;
+	top: 350px;
 	width: auto;
 	height: auto;
 	display: flex;
@@ -46,10 +58,6 @@ body {
 	justify-content: center;
 	align-items:center;
 	margin: 10px;
-}
-
-.title {
-	color: whitesmoke;
 }
 
 #password {
@@ -89,6 +97,9 @@ body {
 /*CSS Reloj*/
 
 .container {
+	position: absolute;
+	right: 500px;
+	top: 25px;
 	margin: 10px;
 	display: flex;
 	align-content: center;
@@ -126,6 +137,9 @@ body {
 /*CSS Añadidor Enlaces*/
 
 .container-link {
+	position: absolute;
+	right: 1000px;
+	top: 200px;
 	padding: 10px;
 	margin: 5px;
 	display: flex;
@@ -198,6 +212,9 @@ a:hover {
 /*CSS de la estacion meteorologica*/
 
 #container-weather {
+	position: absolute;
+	right: 15px;
+	top: 200px;
 	margin: 10px;
 	display: flex;
 	justify-content: end;
