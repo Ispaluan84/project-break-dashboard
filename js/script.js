@@ -59,7 +59,7 @@ hora();
 
 //Código Estación Meteorológica
 
-const endPoint = 'http://api.weatherapi.com/v1/current.json?key=78afec6aed364854a8c100007251004&q=Sevilla&aqi=no';
+const endPoint = 'https://api.weatherapi.com/v1/current.json?key=78afec6aed364854a8c100007251004&q=Sevilla&aqi=no';
 const contWeather = document.getElementById("weather");
 
 function getWeather() {

@@ -56,11 +56,11 @@ function hora() {
     let text = '';
     
     if (hours >= 0 && hours <= 7) {
-      text = 'Es hora de descansar, mañana hay que empezar con buen pie';
+      text = '¡¡Es hora de descansar!!';
     } else if (hours >= 8 && hours < 12) {
-      text = 'Buenos días, un buen desayuno y a darle al código';
+      text = 'Buenos días, un buen desayuno y al código';
     } else if (hours >= 12 && hours < 15) {
-      text = 'No olvides que hay que comer para seguir con energía';
+      text = 'No te olvides que hay que comer';
     } else if (hours >= 15 && hours <= 19) {
       text = 'Eyy, sigue un poco más pero atento a la hora';
     } else {

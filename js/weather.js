@@ -8,7 +8,7 @@ function background() {
 background()
 setInterval(background, 15000)
 
-const endPoint = 'http://api.weatherapi.com/v1/current.json?key=78afec6aed364854a8c100007251004&q=Sevilla&aqi=no';
+const endPoint = 'https://api.weatherapi.com/v1/current.json?key=78afec6aed364854a8c100007251004&q=Sevilla&aqi=no';
 const contWeather = document.getElementById("weather");
 
 function getWeather() {
@@ -32,7 +32,7 @@ function setWeather(){
       <p>${data.current.temp_c} ºC</p>
     </div>
     <div class="climate">
-      <p>Precipitaciones: ${data.current.precip_mm}%</p>
+      <p>Precipitaciones: ${data.current.precip_mm}mm</p>
       <p>Viento: ${data.current.wind_kph}Km/h</p>
       <p>Humedad: ${data.current.humidity}%</p> 
     </div>
@@ -40,5 +40,9 @@ function setWeather(){
 }).catch((err) => {console.error(err.message)})
 }
 setWeather()
+
+
+
+
 
 
